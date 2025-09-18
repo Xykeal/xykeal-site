@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-serif: var(--font-crimson-pro);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  --animate-glow: glow 3s ease-in-out infinite;
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 2px white;
+    }
+    50% {
+      text-shadow: 0 0 8px white;
+    }
+    100% {
+      text-shadow: 0 0 2px white;
+    }
+  }
+
+  --animate-glow-drop: glow-drop 3s ease-in-out infinite;
+  @keyframes glow-drop {
+    0% {
+      filter: drop-shadow(0 0 1px white);
+    }
+    50% {
+      filter: drop-shadow(0 0 3px white);
+    }
+    100% {
+      filter: drop-shadow(0 0 1px white);
+    }
+  }
+}
